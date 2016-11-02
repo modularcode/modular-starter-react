@@ -1,0 +1,49 @@
+{
+  "name": "modular-starter-react",
+  "version": "1.0.0",
+  "description": "Modular starter kit for isomorphic react + redux apps",
+  "scripts": {
+    "start": "concurrently \"npm run client:prod\" \"npm run server:prod\"",
+    "dev": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
+    "server:prod": "node src/server/main.js",
+    "server:dev": "nodemon src/server/main.js --watch \"server/**/*.js\" ",
+    "client:prod": "webpack --config tools/webpack.config.prod.js",
+    "client:dev": "webpack-dev-server --config tools/webpack.config.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modularcode/modular-starter-react.git"
+  },
+  "keywords": [
+    "modular",
+    "react",
+    "reactjs",
+    "flux",
+    "redux",
+    "starter",
+    "kit",
+    "boilerplate",
+    "isomporhic",
+    "universal",
+    "javascript",
+    "js",
+    "jsx",
+    "node",
+    "webpack"
+  ],
+  "author": "Gevorg Harutyunyan <modularcoder@gmail.com>",
+  "contributors": [
+    "Arman Yeghiazaryan <email@gmail.com>",
+    "Gevorg Harutyunyan <modularcoder@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/modularcode/modular-starter-react/issues"
+  },
+  "homepage": "https://github.com/modularcode/modular-starter-react#readme",
+  "dependencies": {
+    "concurrently": "^3.1.0",
+    "webpack": "^1.13.3"
+  }
+}
