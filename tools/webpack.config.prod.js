@@ -6,7 +6,7 @@ const config = require('./config');
 
 module.exports = {
   entry: [
-    path.resolve(config.CLIENT_DIR, 'Main.jsx')   // Your appʼs entry point
+    path.resolve(config.CLIENT_DIR, 'index.jsx')   // Your appʼs entry point
   ],
   output: {
     path: config.DIST_DIR,

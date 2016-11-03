@@ -6,7 +6,8 @@ const config = require('./config');
 
 module.exports = {
   entry: [
-    path.resolve(config.CLIENT_DIR, 'Main.jsx')
+    'react-hot-loader/patch',
+    path.resolve(config.CLIENT_DIR, 'index.jsx')
   ],
   output: {
     path: config.DIST_DIR,
@@ -36,6 +37,9 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
     modulesDirectories: ['src', 'node_modules'],
     root: config.ROOT_DIR,
+  },
+  eslint: {
+    configFile: config.ROOT_DIR + '/.eslintrc'
   },
   devtool: 'source-map',
   devServer: {
