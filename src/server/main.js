@@ -44,27 +44,11 @@ const api = require('./api/api');
 *         Configuring express
 ****************************************/
 
+// Create app instance
 const app = new express();
-
-// var forceSsl = function (req, res, next) {
-//   if (req.headers['x-forwarded-proto'] !== 'https') {
-//     return res.redirect(['https://', req.get('Host'), req.url].join(''));
-//   }
-//   return next();
-// };
-
-// console.log("ENV:", process.env.ENV);
-
-// if (process.env.ENV === 'production') {
-//   console.log("SHOULD REDIREC TO https");
-//   app.use(forceSsl);
-// }
 
 // Load express configurations
 configExpress(app);
-
-// Load express template configurations
-// configTemplateEngine(app);
 
 // Load router
 router(app);
