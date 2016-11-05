@@ -34,11 +34,8 @@ const ENV = require('dotenv').load({
 *          Internal Modules
 ****************************************/
 
-const config = require('./config/config');
-// const configTemplateEngine = require('./config/config-express-template-engine');
-// const configExpress = require('./config/config-express');
+const config = require('./config');
 const router = require('./router');
-const api = require('./api/api');
 
 /****************************************
 *         Configuring express
@@ -47,11 +44,11 @@ const api = require('./api/api');
 // Create app instance
 const app = new express();
 
-// // Load express configurations
-// configExpress(app);
+// Static server
+app.use(express.static(PUBLIC_DIR))
 
-// Load router
-router(app);
+// Router
+app.use(router);
 
 /****************************************
 *           Running Web Server
