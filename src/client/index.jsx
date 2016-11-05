@@ -2,24 +2,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+
 
 // Components
-import Main from './Main';
+import App from './App';
+import Home from './Home/Home';
+import About from './About/About';
+import Contact from './Contact/Contact';
 
-ReactDOM.render(<AppContainer><Main /></AppContainer>, document.querySelector('#app'));
-
-/*
-Ref: http://www.dimagimburg.com/react-hot-loader-with-stateless-components-code-example/
-if (module.hot) {
-  module.hot.accept('./Main', () => {
-    Main = require('./Main').default; // eslint-disable-line global-require
-
-    render(
-      <AppContainer>
-        <Main />
-      </AppContainer>,
-      document.querySelector('#app')
-    );
-  });
-}
-*/
+ReactDOM.render(
+  <AppContainer>
+    <Router history={browserHistory}>
+      <Route component={App}>
+        <Route path="/" component={Home}/>
+        <Route path="/about" component={About}/>
+        <Route path="/contact" component={Contact}/>
+      </Route>
+    </Router>
+  </AppContainer>,
+  document.querySelector('#app')
+);
