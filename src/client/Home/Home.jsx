@@ -5,12 +5,17 @@ import React from 'react';
 import './Home.scss';
 
 // Components
+import Header from '../_common/Header/Header';
 
 export default class Home extends React.Component {
   render() {
     return (
       <div>
-        This is home page
+        <Header />
+        <br /><br />
+        <h1>
+          This is home page
+        </h1>
       </div>
     );
   }

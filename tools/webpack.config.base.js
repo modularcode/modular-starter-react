@@ -29,6 +29,11 @@ module.exports = {
       }
     ]
   },
+  sassLoader: {
+    includePaths: [
+      config.NPM_DIR
+    ]
+  },
   postcss: () => [
     autoprefixer({ browsers: 'last 2 version' })
   ],
