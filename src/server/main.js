@@ -35,8 +35,8 @@ const ENV = require('dotenv').load({
 ****************************************/
 
 const config = require('./config/config');
-const configTemplateEngine = require('./config/config-express-template-engine');
-const configExpress = require('./config/config-express');
+// const configTemplateEngine = require('./config/config-express-template-engine');
+// const configExpress = require('./config/config-express');
 const router = require('./router');
 const api = require('./api/api');
 
@@ -47,8 +47,8 @@ const api = require('./api/api');
 // Create app instance
 const app = new express();
 
-// Load express configurations
-configExpress(app);
+// // Load express configurations
+// configExpress(app);
 
 // Load router
 router(app);

@@ -6,12 +6,10 @@
     "start": "concurrently \"npm run client:prod\" \"npm run server:prod\"",
     "dev": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
     "test": "npm run test:client:lint --silent",
-
     "server:prod": "node src/server/main.js",
     "server:dev": "nodemon src/server/main.js --watch \"server/**/*.js\" ",
     "client:prod": "webpack --config tools/webpack.config.prod.js",
     "client:dev": "webpack-dev-server --config tools/webpack.config.dev.js --hot --inline",
-
     "test:client:lint": "eslint src/client/**"
   },
   "repository": {
@@ -46,6 +44,7 @@
   },
   "homepage": "https://github.com/modularcode/modular-starter-react#readme",
   "dependencies": {
+    "dotenv": "^2.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6"
