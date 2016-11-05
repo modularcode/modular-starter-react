@@ -10,7 +10,7 @@
     "server:dev": "nodemon src/server/main.js --watch \"server/**/*.js\" ",
     "client:prod": "webpack --config tools/webpack.config.prod.js",
     "client:dev": "webpack-dev-server --config tools/webpack.config.dev.js --hot --inline",
-    "test:client:lint": "eslint src/client/**"
+    "test:client:lint": "eslint src/client/**/*.jsx"
   },
   "repository": {
     "type": "git",
