@@ -1,4 +1,4 @@
-# modular-starter-react
+# modular-starter-react (in development)
 
 Modular starter kit for ReactJS applications
 
