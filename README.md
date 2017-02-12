@@ -12,4 +12,7 @@ Modular starter kit for ReactJS applications
 - Webpack dev server 
 - React router
 - Redux
+- Redux dev tools
+- Normalizr
+- Reselect
 
